@@ -1,0 +1,27 @@
+
+$backgroundCard: black;
+$fontColor: white;
+$widthCard: 188px;
+$heightCard: 370px;
+
+.movieCard {
+  background: $backgroundCard;
+  width: $widthCard;
+  height: $heightCard;
+
+  & .posterImage {
+    width: $widthCard;
+    height: 282px;
+  }
+
+  & .infoContainer {
+    width: $widthCard;
+    height: 88px;
+    color: $fontColor;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
