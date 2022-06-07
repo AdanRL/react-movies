@@ -1,5 +1,5 @@
 import { FC } from "react";
-import styles from "./Button.module.css";
+import styles from "./Button.module.scss";
 
 interface Props {
   text: string;

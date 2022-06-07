@@ -13,7 +13,7 @@ login.args = {
   text: "Log In",
   width: "150px",
   height: "40px",
-  color: "#D5E6FB"
+  color: "#F58F8F"
 };
 
 export const signup = Template.bind({});
@@ -21,5 +21,12 @@ signup.args = {
   text: "Sign Up",
   width: "150px",
   height: "40px",
-  color: "#ABD2FF"
+  color: "#EC6161"
+};
+
+export const defaultColor = Template.bind({});
+defaultColor.args = {
+  text: "Sign Up",
+  width: "150px",
+  height: "40px"
 };

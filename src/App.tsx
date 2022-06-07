@@ -1,8 +1,9 @@
 import React from 'react';
+import { MovieListPage } from './pages/MovieListPage/MovieListPage';
 function App() {
   return (
     <div className="App">
-      react-movies
+      <MovieListPage/>
     </div>
   );
 }
