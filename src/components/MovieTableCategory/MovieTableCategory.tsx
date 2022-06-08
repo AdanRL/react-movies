@@ -24,7 +24,8 @@ export const MovieTableCategory: FC<Props> = ({category}) => {
   return( 
     <div className={styles.movieTableContainer}>
       <div className={styles.title}>{category}</div>
-      <div className={styles.cardsContainer}>{cards}</div>
+      <div className={styles.line}></div>
+      <div className={styles.grid}>{cards}</div>
     </div>
     );
 }

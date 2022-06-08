@@ -1,0 +1,11 @@
+$fontColor: white;
+
+.movieTableContainer {
+  
+  width: 100vw;
+  height: 800px;
+  background: yellowgreen;
+  & .title{
+    color: $fontColor;
+  }
+}
