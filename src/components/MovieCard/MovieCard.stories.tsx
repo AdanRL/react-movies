@@ -8,15 +8,24 @@ export default {
 const Template: ComponentStory<typeof MovieCard> = (args) => <MovieCard {...args}/>;
 export const fantasticBeasts = Template.bind({});
 fantasticBeasts.args = {
-  id: 338953
+  title: "Fantastic Beasts",
+  movieImage: "https://www.themoviedb.org/t/p/w188_and_h282_face/yOeuJdwag4bAlnvgrdweRoiuXGC.jpg",
+  releaseDate: "20-02-2022",
+  popularity: 4042.323
 };
 
 export const morbius = Template.bind({});
 morbius.args = {
-  id: 526896
+  title: "Morbius",
+  movieImage: "https://www.themoviedb.org/t/p/w188_and_h282_face/6WmTdYNoSinBAXs0AfTTCSaV5lw.jpg",
+  releaseDate: "20-02-2022",
+  popularity: 4042.323
 };
 
 export const notFound = Template.bind({});
 notFound.args = {
-  id: -1
+  title: "Not Found",
+  movieImage: "",
+  releaseDate: "",
+  popularity: 0
 };
