@@ -1,40 +1,24 @@
-import { FC, useState, useEffect } from "react";
+import { FC } from "react";
 import styles from "./MovieCard.module.scss";
-import { getMovie } from "../../services/movieService";
 
 interface Props {
-  id: number;
+  title: string;
+  movieImage: string;
+  releaseDate: string;
+  popularity: number;
 }
-export const MovieCard: FC<Props> = ({id}) => {
-  const [data, setData] = useState({
-    title: "",
-    movieImage: "",
-    releaseDate: "",
-    popularity: 0
-  });
 
-  useEffect(() => {
-    const loadData = async() => {
-      const movieInfo = await getMovie(id);
-      setData({
-        title: movieInfo.original_title,
-        movieImage: "https://image.tmdb.org/t/p/w188_and_h282_bestv2" + movieInfo.poster_path,
-        releaseDate: movieInfo.release_date,
-        popularity: movieInfo.popularity
-      });
-    };
-    loadData();
-  }, [id])
+export const MovieCard: FC<Props> = ({title, movieImage, releaseDate, popularity = 0}) => {
 
   return( 
     <div className={styles.movieCard}>
       <div className={styles.posterImage}>
-        <img src={data.movieImage} alt="Movie poster" />
+        <img src={movieImage} alt="Movie poster" />
       </div>
       <div className={styles.infoContainer}>
-        <div className={styles.title}>{data.title}</div>
-        <div className={styles.date}>{data.releaseDate}</div>
-        <div className={styles.popularity}>{data.popularity}</div>
+        <div className={styles.title}>{title}</div>
+        <div className={styles.date}>Release: {releaseDate}</div>
+        <div className={styles.popularity}>Popularity: {popularity}</div>
       </div>
     </div>
     );
