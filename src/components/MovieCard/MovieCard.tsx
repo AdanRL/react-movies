@@ -15,7 +15,7 @@ export const MovieCard: FC<Props> = ({id, title, movieImage, releaseDate, popula
   
   return(
    
-    <Link to={movieSite}>
+    <Link to={movieSite} style={{textDecoration: "none"}}>
       <div className={styles.movieCard}>
         <div className={styles.posterImage}>
           <img src={movieImage} alt="Movie poster" />
