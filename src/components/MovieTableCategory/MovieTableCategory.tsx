@@ -29,5 +29,5 @@ export const MovieTableCategory: FC<Props> = ({category}) => {
       </div>
         <div className={styles.sliderContainer}>{cards}</div>
     </div>
-    );
+  );
 }
