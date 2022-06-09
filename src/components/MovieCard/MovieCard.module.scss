@@ -2,13 +2,18 @@
 $backgroundCard: black;
 $fontColor: white;
 $widthCard: 188px;
-$heightCard: 370px;
+$heightCard: 100%;
 
 .movieCard {
   background: $backgroundCard;
   width: $widthCard;
   height: $heightCard;
   margin-left: 30px;
+
+
+  & .icon {
+    transform: translateX(50px);
+  }
 
   & .posterImage {
     width: $widthCard;
