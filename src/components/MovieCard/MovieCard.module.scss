@@ -8,10 +8,15 @@ $heightCard: 370px;
   background: $backgroundCard;
   width: $widthCard;
   height: $heightCard;
+  margin-left: 30px;
 
   & .posterImage {
     width: $widthCard;
     height: 282px;
+    & img:hover {
+      transform: translateY(-10px);
+      transition: 0.2 all linear;
+    }
   }
 
   & .infoContainer {
@@ -23,5 +28,9 @@ $heightCard: 370px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    & .title {
+      text-align: center;
+    }
   }
 }

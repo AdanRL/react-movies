@@ -18,5 +18,3 @@ If user is not logged, a more popular movie list will be showed
 ### Second screen 🖥🔍
 
 Movie details view that shows more info.
-
-### Mockups
