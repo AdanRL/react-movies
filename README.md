@@ -22,7 +22,7 @@ npm install
 
 ### 🖥📜 First screen
 
-Needs a movie list with the next info:
+Needs a movie list with the following info:
 
 * Title
 * Poster image
