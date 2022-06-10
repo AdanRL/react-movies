@@ -17,14 +17,16 @@ export const MovieTableCategory: FC<Props> = ({category}) => {
   }, [])
 
   const cards:any = [];
-  movies.forEach((movie:any) => {
-      cards.push(<MovieCard id={movie.id} title={movie.original_title} movieImage={"https://image.tmdb.org/t/p/w188_and_h282_bestv2" + movie.poster_path} releaseDate={movie.release_date}  popularity={movie.popularity}  />)
+  movies.forEach((movie:any, index) => {
+      cards.push(<MovieCard key={index} id={movie.id} title={movie.original_title} movieImage={"https://image.tmdb.org/t/p/w188_and_h282_bestv2" + movie.poster_path} releaseDate={movie.release_date}  popularity={movie.popularity}  />)
   });
 
   return( 
     <div className={styles.movieTableContainer}>
       <div className={styles.header}>
-        <div className={styles.title}><h2>{category}</h2></div>
+        <div className={styles.title}>
+          <h2>{category}</h2>
+        </div>
         <div className={styles.line}></div>
       </div>
         <div className={styles.sliderContainer}>{cards}</div>

@@ -1,6 +1,10 @@
 import { FC, useState } from 'react';
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
 import { StarBorder, Star } from '@mui/icons-material';
+
+import { addTrackedList, removeTrackedList } from '../../store/slices/movieTrack/slice';
+
 import styles from "./MovieCard.module.scss";
 
 interface Props {
@@ -12,11 +16,12 @@ interface Props {
 }
 
 export const MovieCard: FC<Props> = ({id, title, movieImage, releaseDate, popularity = 0}) => {
+  const dispatch = useDispatch();
   let movieSite = "/details/" + id.toString();
   const [tracked, setTracked] = useState(false);
   const handleTracked = () => {
     setTracked(tracked ? false : true);
-    console.log(tracked);
+    tracked ? dispatch(removeTrackedList(title)) : dispatch(addTrackedList(title));
   };
   
   return(
