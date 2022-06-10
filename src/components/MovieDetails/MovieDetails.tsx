@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import styles from "./MovieDetails.module.scss";
 
 interface Props {
