@@ -2,16 +2,26 @@
 $backgroundCard: black;
 $fontColor: white;
 $widthCard: 188px;
-$heightCard: 370px;
+$heightCard: 100%;
 
 .movieCard {
   background: $backgroundCard;
   width: $widthCard;
   height: $heightCard;
+  margin-left: 30px;
+
+
+  & .icon {
+    transform: translateX(50px);
+  }
 
   & .posterImage {
     width: $widthCard;
     height: 282px;
+    & img:hover {
+      transform: translateY(-10px);
+      transition: 0.2 all linear;
+    }
   }
 
   & .infoContainer {
@@ -23,5 +33,9 @@ $heightCard: 370px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    & .title {
+      text-align: center;
+    }
   }
 }

@@ -1,10 +1,21 @@
 import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import { store } from './store/store';
 import { MovieListPage } from './pages/MovieListPage/MovieListPage';
+import { MovieDetailPage } from './pages/MovieDetailPage/MovieDetailPage';
+
 function App() {
   return (
-    <div className="App">
-      <MovieListPage/>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MovieListPage/>}/>
+            <Route path="/details/:id" element={<MovieDetailPage/>}/>
+          </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

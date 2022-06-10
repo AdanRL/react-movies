@@ -1,16 +1,27 @@
 $fontColor: white;
 
 .movieTableContainer {
-  width: 100vw;
-  height: 120px;
-  & .title{
-    color: $fontColor;
+  width: 90vw;
+  height: 25%;
+  & .header {
+
+    & .title {
+      color: $fontColor;
+    }
+
+    & .line {
+      width: 100%;
+      background: red;
+      height: 2px;
+    }
+
   }
 
-  & .sliderContainer{
+  & .sliderContainer {
     width: 100%;
     display: flex;
-    overflow-x: auto;
+    align-items: center;
+    overflow-x:scroll;
   }
 }
 
