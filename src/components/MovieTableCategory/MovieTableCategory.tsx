@@ -1,7 +1,8 @@
 import { FC, useState, useEffect } from "react";
-import styles from "./MovieTableCategory.module.scss";
+
 import { getPopularMovies } from "../../services/movieService";
 import { MovieCard } from "../MovieCard/MovieCard";
+import styles from "./MovieTableCategory.module.scss";
 interface Props {
   category: string;
 }

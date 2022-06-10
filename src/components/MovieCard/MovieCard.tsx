@@ -1,10 +1,9 @@
-import { FC, useState } from 'react';
+import { FC, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { StarBorder, Star } from '@mui/icons-material';
+import { useDispatch } from "react-redux";
+import { StarBorder, Star } from "@mui/icons-material";
 
-import { addTrackedList, removeTrackedList } from '../../store/slices/movieTrack/slice';
-
+import { addTrackedList, removeTrackedList } from "../../store/slices/movieTrack/slice";
 import styles from "./MovieCard.module.scss";
 
 interface Props {

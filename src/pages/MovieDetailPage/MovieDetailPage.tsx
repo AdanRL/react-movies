@@ -1,9 +1,9 @@
 import {FC, useEffect, useState} from "react";
 import { useLocation } from "react-router-dom";
+
 import {Header} from "../../components/Header/Header";
 import {MovieDetails} from "../../components/MovieDetails/MovieDetails";
 import { getMovie } from "../../services/movieService";
-import styles from "./MovieDetailPage.module.scss";
 
 export const MovieDetailPage: FC = () => {
   let url = useLocation();

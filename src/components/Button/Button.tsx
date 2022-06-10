@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import styles from "./Button.module.scss";
 
 interface Props {
@@ -8,7 +9,6 @@ interface Props {
   color?: string;
 }
 export const Button: FC<Props> = ({ text, width, height, color }) => {
-  
   return( 
     <button className={styles.button} style={{ width: width, height: height, background: color }}> { text } </button>
     );
