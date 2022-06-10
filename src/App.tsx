@@ -11,7 +11,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
           <Routes>
-            <Route path="/" element={<MovieListPage/>}/>
+            <Route path="/react-movies" element={<MovieListPage/>}/>
             <Route path="/details/:id" element={<MovieDetailPage/>}/>
           </Routes>
       </BrowserRouter>

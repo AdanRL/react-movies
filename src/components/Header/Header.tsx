@@ -8,12 +8,14 @@ export const Header: FC = () => {
   
   return( 
     <div className={styles.header}>
-      <Link to="/" style={{textDecoration: "none"}}>
+      <Link to="/react-movies" style={{textDecoration: "none"}}>
         <div className={styles.logo}>
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="react logo" width="30px" height="30px" />
         </div>
       </Link>
-      <div className={styles.title}>React Movies</div>
+      <Link to="/react-movies" style={{textDecoration: "none"}}>
+        <div className={styles.title}>React Movies</div>
+      </Link>
       <div className={styles.buttonContainer}>
         <Button text="Log In" width="150px" height="40px" color="#F58F8F"/>
         <Button text="Sign Up" width="150px" height="40px" color="#EC6161"/>
