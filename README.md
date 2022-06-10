@@ -16,6 +16,8 @@ cd react-movies
 npm install
 ```
 
+👁 Don't forget to put the api key on the .env.local! 💣
+
 ## 🎯 Objetives
 
 ### 🖥📜 First screen
