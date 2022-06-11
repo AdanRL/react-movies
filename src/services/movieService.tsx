@@ -13,7 +13,7 @@ export const getMovie = async(id: number) => {
     return response.data;
   } catch (err) {
       return notFounded;
-  };
+  }
 };
 
 export const getPopularMovies = async() => {
@@ -22,5 +22,5 @@ export const getPopularMovies = async() => {
     return response.data.results;
   } catch (err) {
       return [];
-  };
-}
+  }
+};

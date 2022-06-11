@@ -9,6 +9,7 @@ interface Props {
   releaseDate: string;
   description: string;
 }
+
 export const MovieDetails: FC<Props> = ({title, posterImage,  genres, releaseDate, description}) => {
 
   return( 
@@ -24,4 +25,4 @@ export const MovieDetails: FC<Props> = ({title, posterImage,  genres, releaseDat
       </div>
     </div>
     );
-}
+};

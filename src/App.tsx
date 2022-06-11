@@ -1,10 +1,9 @@
-import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { Provider } from 'react-redux';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { Provider } from "react-redux";
 
-import { store } from './store/store';
-import { MovieListPage } from './pages/MovieListPage/MovieListPage';
-import { MovieDetailPage } from './pages/MovieDetailPage/MovieDetailPage';
+import { store } from "./store/store";
+import { MovieListPage } from "./pages/MovieListPage/MovieListPage";
+import { MovieDetailPage } from "./pages/MovieDetailPage/MovieDetailPage";
 
 function App() {
   return (

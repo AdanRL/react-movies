@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import styles from "./Header.module.scss";
-import { Button } from '../Button/Button';
+import { Button } from "../Button/Button";
 
 export const Header: FC = () => {
   
@@ -22,4 +22,4 @@ export const Header: FC = () => {
       </div>
     </div>
     );
-}
+};

@@ -6,7 +6,7 @@ import {MovieDetails} from "../../components/MovieDetails/MovieDetails";
 import { getMovie } from "../../services/movieService";
 
 export const MovieDetailPage: FC = () => {
-  let url = useLocation();
+  const url = useLocation();
   const [movieData, setMovieData] = useState({
     title: "",
     posterImage: "",
@@ -14,15 +14,14 @@ export const MovieDetailPage: FC = () => {
     genres: [],
     releaseDate: "",
     description: "",
-
   });
 
   useEffect(() => {
-    const loadData = async(id: any) => {
+    const loadData = async(id: number) => {
       const movieInfo = await getMovie(id);
-      const genres = movieInfo.genres.map((genre:any) => {
-        return genre.name
-      })
+      const genres = movieInfo.genres.map((genre: {name: string}) => {
+        return genre.name;
+      });
 
       setMovieData({ 
         title: movieInfo.original_title,
@@ -32,10 +31,10 @@ export const MovieDetailPage: FC = () => {
         releaseDate: movieInfo.realease_date,
         description: movieInfo.overview
       });
-    }
+    };
 
-    loadData(url.pathname.split("/").pop());
-  },[url])
+    loadData(Number(url.pathname.split("/").pop()));
+  },[url]);
   return (
     <div>
       <Header />
