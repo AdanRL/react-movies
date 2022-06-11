@@ -3,7 +3,7 @@ import {Header} from "../../components/Header/Header";
 import {MovieTableCategory} from "../../components/MovieTableCategory/MovieTableCategory";
 
 import styles from "./MovieListPage.module.scss";
-import { TrackedList } from '../../components/TrackedList/TrackedList';
+import { TrackedList } from "../../components/TrackedList/TrackedList";
 
 export const MovieListPage: FC = () => {
 

@@ -16,7 +16,7 @@ interface Props {
 
 export const MovieCard: FC<Props> = ({id, title, movieImage, releaseDate, popularity = 0}) => {
   const dispatch = useDispatch();
-  let movieSite = "/details/" + id.toString();
+  const movieSite = "/details/" + id.toString();
   const [tracked, setTracked] = useState(false);
   const handleTracked = () => {
     setTracked(tracked ? false : true);
@@ -38,4 +38,4 @@ export const MovieCard: FC<Props> = ({id, title, movieImage, releaseDate, popula
         </div>
       </div>
     );
-}
+};

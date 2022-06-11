@@ -12,4 +12,4 @@ export const Button: FC<Props> = ({ text, width, height, color }) => {
   return( 
     <button className={styles.button} style={{ width: width, height: height, background: color }}> { text } </button>
     );
-}
+};

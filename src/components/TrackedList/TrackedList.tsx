@@ -8,7 +8,7 @@ export const TrackedList: FC = () => {
 
   const list:any = [];
   trackedList.forEach((movie:any, index:number) => {
-    list.push(<div key={index} className={styles.movieTitle}>{movie}</div>)
+    list.push(<div key={index} className={styles.movieTitle}>{movie}</div>);
   });
 
   return(
@@ -17,4 +17,4 @@ export const TrackedList: FC = () => {
       {list}
     </div>
   );
-}
+};

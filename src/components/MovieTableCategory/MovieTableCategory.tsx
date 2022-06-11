@@ -13,13 +13,21 @@ export const MovieTableCategory: FC<Props> = ({category}) => {
     const loadData = async() => {
       const movieInfo = await getPopularMovies();
       setMovies(movieInfo);
-    }
+    };
     loadData();
-  }, [])
+  }, []);
 
-  const cards:any = [];
-  movies.forEach((movie:any, index) => {
-      cards.push(<MovieCard key={index} id={movie.id} title={movie.original_title} movieImage={"https://image.tmdb.org/t/p/w188_and_h282_bestv2" + movie.poster_path} releaseDate={movie.release_date}  popularity={movie.popularity}  />)
+  const cards: any = [];
+  movies.forEach((movie: {id: number, original_title: string, poster_path: string, release_date: string, popularity: number}, index) => {
+      cards.push(
+      <MovieCard 
+        key={index} 
+        id={movie.id} 
+        title={movie.original_title} 
+        movieImage={"https://image.tmdb.org/t/p/w188_and_h282_bestv2" + movie.poster_path} 
+        releaseDate={movie.release_date}  
+        popularity={movie.popularity}  
+      />);
   });
 
   return( 
@@ -33,4 +41,4 @@ export const MovieTableCategory: FC<Props> = ({category}) => {
         <div className={styles.sliderContainer}>{cards}</div>
     </div>
   );
-}
+};
